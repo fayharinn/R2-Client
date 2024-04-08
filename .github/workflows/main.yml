@@ -1,0 +1,25 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    - name: Install Dependencies
+      run: |
+        pip install -r requirements.txt
+    - name: Run Tests & Generate Coverage Report
+      run: |
+        pytest --cov=./
+    - name: Upload Coverage to Codecov
+      uses: codecov/codecov-action@v2
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}  # Not required for public repos
+        file: ./coverage.xml  # Specify the location of the coverage report
+        flags: unittests  # Optional, but useful for categorizing reports
+        name: codecov-umbrella  # Optional, names the report for differentiation in UI
+        fail_ci_if_error: true  # Optional, will fail CI if Codecov runs into an error
