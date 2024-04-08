@@ -25,10 +25,10 @@ Here's how to get started with `r2client`:
 First, import `R2Client` and initialize it with your credentials:
 
 ```python
-from r2client import R2Client
+from r2client.R2Client import R2Client as r2
 
 # Initialize the R2Client
-client = R2Client(
+client = r2(
     access_key='<ACCESS_KEY>',
     secret_key='<SECRET_KEY>',
     endpoint='<ENDPOINT> (example: "https://***.r2.cloudflarestorage.com")'
