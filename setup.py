@@ -8,8 +8,7 @@ setup(
     long_description=open('README.md', encoding='utf-8').read(),
     long_description_content_type='text/markdown',  # Specify the content type as Markdown
     url='https://github.com/fayharinn/R2-Client',
-    author='Younes Bensitel',
-    author_email='younes@fayhe.fr',
+    author='Fayhe',
     license='MIT',
     install_requires=[
         'requests',
