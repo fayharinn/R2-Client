@@ -8,6 +8,7 @@ mime_types = {
     '.gif': 'image/gif',
     '.svg': 'image/svg+xml',  # Scalable Vector Graphics
     '.ico': 'image/x-icon',    # Icon file format
+    '.webp': 'image/webp',     # WebP image format
 
     # Audio formats
     '.m4a': 'audio/x-m4a',
