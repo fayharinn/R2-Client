@@ -3,7 +3,7 @@ import hmac
 import hashlib
 import datetime
 import xml.etree.ElementTree as ET
-from mime_types import *
+from .mime_types import *
 
 
 class R2Client:
